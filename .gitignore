@@ -1,0 +1,8 @@
+*.gif
+*.png
+*.jpeg
+*.jpg
+**/Debug
+**/Release
+.vs/
+packages/

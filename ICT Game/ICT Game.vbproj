@@ -1,0 +1,218 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectGuid>{5966F91A-B47F-4E59-BB75-BF704311DCBD}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <OutputType>WinExe</OutputType>
+    <MyType>WindowsForms</MyType>
+    <RootNamespace>NUMBERS_ROOT</RootNamespace>
+    <AssemblyName>NUMBERS_APPMAIN</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <Prefer32Bit>True</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>Full</DebugType>
+    <Optimize>False</Optimize>
+    <DefineConstants>DEBUG=1,TRACE=1</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <DebugSymbols>False</DebugSymbols>
+    <DebugType>None</DebugType>
+    <Optimize>True</Optimize>
+    <DefineConstants>TRACE=1</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>NUMBERS_ROOT.My.MyApplication</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Direction Up.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic.PowerPacks, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Design" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="Form1.Designer.vb">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="highscore.Designer.vb">
+      <DependentUpon>highscore.vb</DependentUpon>
+    </Compile>
+    <Compile Include="highscore.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Highscore_Manager.vb" />
+    <Compile Include="MainForm.Designer.vb">
+      <DependentUpon>MainForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="msg.Designer.vb">
+      <DependentUpon>msg.vb</DependentUpon>
+    </Compile>
+    <Compile Include="msg.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pause.Designer.vb">
+      <DependentUpon>pause.vb</DependentUpon>
+    </Compile>
+    <Compile Include="pause.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Program.vb" />
+    <Compile Include="Properties\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.vb" />
+    <Compile Include="Properties\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="revival.Designer.vb">
+      <DependentUpon>revival.vb</DependentUpon>
+    </Compile>
+    <Compile Include="revival.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="yesno.Designer.vb">
+      <DependentUpon>yesno.vb</DependentUpon>
+    </Compile>
+    <Compile Include="yesno.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="highscore.resx">
+      <DependentUpon>highscore.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="msg.resx">
+      <DependentUpon>msg.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pause.resx">
+      <DependentUpon>pause.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="revival.resx">
+      <DependentUpon>revival.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="yesno.resx">
+      <DependentUpon>yesno.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Direction Up.ico" />
+    <Content Include="number_0.png" />
+    <Content Include="number_0_sel.png" />
+    <Content Include="number_1.png" />
+    <Content Include="number_1_sel.png" />
+    <Content Include="number_2.png" />
+    <Content Include="number_2_sel.png" />
+    <Content Include="number_3.png" />
+    <Content Include="number_3_sel.png" />
+    <Content Include="number_4.png" />
+    <Content Include="number_4_sel.png" />
+    <Content Include="number_5.png" />
+    <Content Include="number_5_sel.png" />
+    <Content Include="number_6.png" />
+    <Content Include="number_6_sel.png" />
+    <Content Include="number_7.png" />
+    <Content Include="number_7_sel.png" />
+    <Content Include="number_8.png" />
+    <Content Include="number_8_sel.png" />
+    <Content Include="number_9.png" />
+    <Content Include="number_9_sel.png" />
+    <None Include="Properties\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Resources\heart.gif" />
+    <None Include="Resources\cpu in use.gif" />
+    <None Include="Resources\number_9_sel.png" />
+    <None Include="Resources\number_9.png" />
+    <None Include="Resources\number_8_sel.png" />
+    <None Include="Resources\number_8.png" />
+    <None Include="Resources\number_7_sel.png" />
+    <None Include="Resources\number_7.png" />
+    <None Include="Resources\number_6_sel.png" />
+    <None Include="Resources\number_6.png" />
+    <None Include="Resources\number_5_sel.png" />
+    <None Include="Resources\number_5.png" />
+    <None Include="Resources\number_4_sel.png" />
+    <None Include="Resources\number_4.png" />
+    <None Include="Resources\number_3_sel.png" />
+    <None Include="Resources\number_3.png" />
+    <None Include="Resources\number_2_sel.png" />
+    <None Include="Resources\number_2.png" />
+    <None Include="Resources\number_1_sel.png" />
+    <None Include="Resources\number_1.png" />
+    <None Include="Resources\number_0_sel.png" />
+    <None Include="Resources\number_0.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>
